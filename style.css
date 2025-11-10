@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #403f44,#5e4521);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #c27e35bd, #ccb363);
+  color: #ffffff;
+  padding: 8px;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Nav Links Container */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual List Item for Positioning Pseudo Elements */
+.nav-links li {
+  position: relative;
+}
+
+/* Anchor Styling */
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 20px;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+/* Underline Effect */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 80%;
+  height: 2px;
+  background-color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Responsive Nav (Optional for Mobile - Ready for Toggle) */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #6C47FF;
+    width: 100%;
+    display: none; /* You can toggle this with JS for mobile view */
+    padding: 1rem 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/*Header Section*/
+.head{
+    display: flex;
+    margin: 10px;
+    max-width: auto;
+    max-height: 500px;
+    border: 1px solid black;
+    padding: 10px;
+}
+.head .img-txt{
+    border: 1px solid black;
+    padding: 10px;
+    max-width: 75%;
+}
+
+.img-txt .login-rdt{
+    border-radius: 15px;
+    width: 100px;
+    height: 25px;
+    position: relative;
+    color: #1e3226;
+    font-weight: 800;
+    font-family: sans-serif;
+    border: none;
+    box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.685);
+}
+
+.head .img-sec{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.img-sec img {
+    max-height: 500px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0  rgba(236, 210, 138, 0.445);
+
+}
