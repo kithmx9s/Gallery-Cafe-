@@ -1,129 +1,155 @@
-body {
+/* ===== Colors ===== */
+:root {
+  --coffee-brown: #6f4e37;
+  --pastel-green: #d8e3d0;
+  --cream: #f9f7f1;
+  --coffee-black: #2c2c2c;
+  --white: #ffffff;
+}
+
+/* ===== Reset & Base ===== */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #403f44,#5e4521);
-  color: #fff;
-  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--coffee-black);
+}
+
+/* ===== Navbar ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #c27e35bd, #ccb363);
-  color: #ffffff;
-  padding: 8px;
-  position: relative;
-  z-index: 1000;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  transition: background 0.3s ease-in-out;
 }
 
 /* Logo */
-.logo {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.8rem;
-  font-weight: bold;
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-/* Nav Links Container */
+.nav-logo img {
+  height: 40px;
+  width: 40px;
+}
+
+.nav-logo span {
+  font-weight: 700;
+  color: var(--coffee-brown);
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.nav-logo span:hover {
+  color: var(--pastel-green);
+}
+
+/* Links */
 .nav-links {
   display: flex;
-  gap: 2rem;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  gap: 2rem;
 }
 
-/* Individual List Item for Positioning Pseudo Elements */
-.nav-links li {
-  position: relative;
-}
-
-/* Anchor Styling */
-.nav-links li a {
+.nav-links a {
   text-decoration: none;
-  color: #ffffff;
-  font-weight: 600;
-  padding: 10px;
-  border-radius: 20px;
+  color: var(--coffee-black);
+  font-weight: 500;
   position: relative;
-  display: inline-block;
   transition: color 0.3s ease;
 }
 
-/* Underline Effect */
-.nav-links li a::after {
-  content: '';
+/* Hover underline animation */
+.nav-links a::after {
+  content: "";
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0);
-  transform-origin: center;
-  width: 80%;
+  width: 0%;
   height: 2px;
-  background-color: #ffffff;
-  transition: transform 0.3s ease;
+  left: 0;
+  bottom: -5px;
+  background-color: var(--coffee-brown);
+  transition: all 0.3s ease;
 }
 
-.nav-links li a:hover::after {
-  transform: translateX(-50%) scaleX(1);
+.nav-links a:hover::after {
+  width: 100%;
 }
 
-/* Responsive Nav (Optional for Mobile - Ready for Toggle) */
-@media (max-width: 768px) {
+.nav-links a:hover {
+  color: var(--coffee-brown);
+}
+
+.nav-links .active {
+  color: var(--coffee-brown);
+}
+
+/* Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-icons a {
+  color: var(--coffee-black);
+  font-size: 1.2rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.nav-icons a:hover {
+  color: var(--coffee-brown);
+  transform: scale(1.2);
+}
+
+/* ===== Mobile Menu ===== */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--coffee-black);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
   .nav-links {
-    flex-direction: column;
     position: absolute;
     top: 70px;
-    left: 0;
-    background: #6C47FF;
+    left: -100%;
     width: 100%;
-    display: none; /* You can toggle this with JS for mobile view */
-    padding: 1rem 0;
-  }
-
-  .navbar {
+    background-color: var(--white);
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    transition: left 0.4s ease;
   }
-}
 
-/*Header Section*/
-.head{
-    display: flex;
-    margin: 10px;
-    max-width: auto;
-    max-height: 500px;
-    border: 1px solid black;
-    padding: 10px;
-}
-.head .img-txt{
-    border: 1px solid black;
-    padding: 10px;
-    max-width: 75%;
-}
+  .nav-links.active {
+    left: 0;
+  }
 
-.img-txt .login-rdt{
-    border-radius: 15px;
-    width: 100px;
-    height: 25px;
-    position: relative;
-    color: #1e3226;
-    font-weight: 800;
-    font-family: sans-serif;
-    border: none;
-    box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.685);
-}
+  .menu-toggle {
+    display: block;
+  }
 
-.head .img-sec{
-    border: 1px solid black;
-    padding: 10px;
-}
-
-.img-sec img {
-    max-height: 500px;
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0  rgba(236, 210, 138, 0.445);
-
+  .nav-icons {
+    display: none;
+  }
 }

@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Café</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
 </head>
 <body>
-    <!--Navigation Bar-->
-     <nav class="navbar">
-    <div class="logo">Gallery Cafe</div>
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Menu</a></li>
-      <li><a href="#">Events</a></li>
-      <li><a href="#"><span class="material-icons">login</span></a></li>
-    </ul>
-  </nav>
-  <header class="head">
-    <div class="img-txt">
-        <h1>Welcome to the Gallery Cafe</h1>
-        <p>Lorem ipsum dolor sit 
-            amet consectetur adipisicing elit. 
-            Id consequatur quas corporis. Ducimus tenetur perferendis error temporibus, 
-            cum inventore repellendus. Soluta modi animi minima explicabo optio cum voluptas 
-            eveniet mollitia.</p>
-            <button class="login-rdt">Join Us </button>
-    </div>
-    <div class="img-sec">
-        <img src="./assets/img/img1.jpg" alt="ture story">
-    </div>
 
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav class="navbar">
+      <!-- Left: Logo -->
+      <div class="nav-logo">
+        <img src="assets/logo.png" alt="Global Café Logo" />
+        <span>Global Café</span>
+      </div>
+
+      <!-- Center: Nav Links -->
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#reservation">Reservation</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#about">About Us</a></li>
+      </ul>
+
+      <!-- Right: Icons -->
+      <div class="nav-icons">
+        <a href="#login" class="login-btn"><i class="fa-solid fa-user"></i></a>
+        <a href="#search" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </nav>
   </header>
+
+  <!-- Dummy content to test scroll behavior -->
+  <section style="height:150vh; background:#f9f7f1;"></section>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
