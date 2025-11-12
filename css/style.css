@@ -431,3 +431,146 @@ header {
   transform: scale(1.05);
 }
 
+/* Customer Feedback Section */
+.customer-feedback {
+  background-color: #fffaf4;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.feedback-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feedback-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.feedback-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.customer-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #6f4e37;
+  margin-bottom: 15px;
+}
+
+.customer-name {
+  font-size: 1.2rem;
+  color: #3e2723;
+  margin-bottom: 5px;
+}
+
+.review-date {
+  font-size: 0.9rem;
+  color: #8d6e63;
+  margin-bottom: 15px;
+}
+
+.review-text {
+  font-size: 0.95rem;
+  color: #4e342e;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.stars {
+  color: #ffb400;
+  font-size: 1.1rem;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: var(--coffee-black);
+  color: var(--white);
+  padding: 60px 10% 30px;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-section h3 {
+  color: var(--pastel-green);
+  margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: var(--pastel-green);
+}
+
+.footer-section .social-icons a {
+  margin-right: 15px;
+  color: var(--white);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.footer-section .social-icons a:hover {
+  color: var(--pastel-green);
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+}

@@ -44,3 +44,18 @@ document.querySelectorAll(".add-to-cart").forEach((btn) => {
   });
 });
 
+const feedbackCards = document.querySelectorAll(".feedback-card");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in");
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+feedbackCards.forEach((card) => observer.observe(card));
+
