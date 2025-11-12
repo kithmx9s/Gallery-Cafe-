@@ -24,3 +24,16 @@ window.addEventListener("scroll", () => {
     hero.style.transform = "translateY(0)";
   }
 });
+
+// Fade-in animation on scroll for Our Story
+window.addEventListener("scroll", () => {
+  const story = document.querySelector(".story-container");
+  const position = story.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+
+  if (position < windowHeight - 100) {
+    story.querySelector(".story-img").style.opacity = "1";
+    story.querySelector(".story-content").style.opacity = "1";
+  }
+});
+
