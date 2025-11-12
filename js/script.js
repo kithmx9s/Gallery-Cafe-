@@ -37,3 +37,10 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// Add-to-Cart button mock
+document.querySelectorAll(".add-to-cart").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    alert("Item added to cart! (Feature coming soon)");
+  });
+});
+
