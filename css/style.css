@@ -150,6 +150,7 @@ header {
   }
 
   .nav-icons {
-    display: none;
+    display: flex;
+    color: #2c2c2c;
   }
 }
