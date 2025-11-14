@@ -1,0 +1,160 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background: #f9f9f9;
+}
+
+/* Sidebar (reuse same style as dashboard) */
+.sidebar {
+    width: 250px;
+    background: #4b3621;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+}
+
+.sidebar-brand {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-brand i {
+    margin-right: 10px;
+    color: #c1e1c1;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 20px 0;
+    flex: 1;
+}
+
+.sidebar-menu li {
+    margin-bottom: 15px;
+}
+
+.sidebar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar-menu li a:hover,
+.sidebar-menu li.active a {
+    background: #2c1f14;
+}
+
+.sidebar-menu i {
+    margin-right: 10px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: 100%;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+header h2 {
+    font-size: 1.8rem;
+    color: #4b3621;
+}
+
+/* Form Styling */
+.add-food-form form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+
+.add-food-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+    color: #4b3621;
+}
+
+.add-food-form input,
+.add-food-form textarea,
+.add-food-form select {
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+.add-food-form input:focus,
+.add-food-form textarea:focus,
+.add-food-form select:focus {
+    border-color: #c1e1c1;
+}
+
+.add-food-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.submit-btn {
+    margin-top: 20px;
+    width: 100%;
+    background: #4b3621;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #2c1f14;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+    .main-content {
+        margin-left: 200px;
+    }
+
+    .add-food-form form {
+        padding: 20px;
+    }
+}
+
+@media(max-width: 480px){
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 15px;
+    }
+}
