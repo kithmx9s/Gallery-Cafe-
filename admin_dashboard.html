@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/admin_dashboard.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2><span><i class="fas fa-coffee"></i></span> Gallery Café</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li class="active"><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="#"><i class="fas fa-utensils"></i> Add Food</a></li>
+            <li><a href="#"><i class="fas fa-table"></i> Manage Menu</a></li>
+            <li><a href="#"><i class="fas fa-calendar-alt"></i> Reservations</a></li>
+            <li><a href="#"><i class="fas fa-bullhorn"></i> Events</a></li>
+            <li><a href="#"><i class="fas fa-users"></i> Users</a></li>
+            <li><a href="#"><i class="fas fa-chart-line"></i> Analytics</a></li>
+            <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Header -->
+        <header>
+            <h2>Dashboard</h2>
+        </header>
+
+        <!-- Dashboard Cards -->
+        <section class="dashboard-cards">
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-utensils"></i></div>
+                <div class="card-info">
+                    <h3>120</h3>
+                    <p>Total Items</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-receipt"></i></div>
+                <div class="card-info">
+                    <h3>35</h3>
+                    <p>Orders Today</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-calendar-check"></i></div>
+                <div class="card-info">
+                    <h3>15</h3>
+                    <p>Reservations</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-dollar-sign"></i></div>
+                <div class="card-info">
+                    <h3>LKR 25,000</h3>
+                    <p>Revenue Today</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charts / Tables (placeholder for now) -->
+        <section class="dashboard-widgets">
+            <div class="widget">
+                <h3>Orders Overview</h3>
+                <p>Chart placeholder</p>
+            </div>
+            <div class="widget">
+                <h3>Top Categories</h3>
+                <p>Chart placeholder</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="admin_dashboard.js"></script>
+</body>
+</html>
