@@ -1,3 +1,7 @@
+<?php
+include 'db_connect.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +30,6 @@
         </ul>
     </aside>
 
-    <!-- Main Content -->
     <main class="main-content">
         <header>
             <h2>Manage Menu</h2>
@@ -47,32 +50,30 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><img src="images/sample.jpg" alt="Food Sample" class="item-img"></td>
-                        <td>Kottu</td>
-                        <td>Main</td>
-                        <td>Sri Lankan</td>
-                        <td>LKR 450</td>
-                        <td>Available</td>
-                        <td><button class="edit-btn"><i class="fas fa-edit"></i></button></td>
-                        <td><button class="delete-btn"><i class="fas fa-trash"></i></button></td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/sample.jpg" alt="Food Sample" class="item-img"></td>
-                        <td>Chicken Tikka</td>
-                        <td>Main</td>
-                        <td>Indian</td>
-                        <td>LKR 600</td>
-                        <td>Available</td>
-                        <td><button class="edit-btn"><i class="fas fa-edit"></i></button></td>
-                        <td><button class="delete-btn"><i class="fas fa-trash"></i></button></td>
-                    </tr>
-                    <!-- More rows can be added dynamically -->
+                    <?php
+                    $result = $conn->query("SELECT * FROM food_items ORDER BY created_at DESC");
+                    if($result->num_rows > 0){
+                        while($row = $result->fetch_assoc()){
+                            echo "<tr>
+                                    <td><img src='images/".$row['image']."' class='item-img'></td>
+                                    <td>".$row['name']."</td>
+                                    <td>".$row['category']."</td>
+                                    <td>".$row['country']."</td>
+                                    <td>LKR ".$row['price']."</td>
+                                    <td>".$row['availability']."</td>
+                                    <td><a href='edit_food.php?id=".$row['id']."' class='edit-btn'><i class='fas fa-edit'></i></a></td>
+                                    <td><a href='delete_food.php?id=".$row['id']."' class='delete-btn'><i class='fas fa-trash'></i></a></td>
+                                </tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='8'>No food items found.</td></tr>";
+                    }
+                    ?>
                 </tbody>
             </table>
         </section>
     </main>
 
-    <script src="/js/manage_menu.js"></script>
+    <script src="manage_menu.js"></script>
 </body>
 </html>
