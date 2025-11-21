@@ -14,65 +14,102 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* NAVBAR FIX (NO OVERLAP) */
-.nav-header {
-  width: 100%;
-  background: #ffffff;
-  position: sticky;
+/* ===== Navbar ===== */
+header {
+  position: fixed;
   top: 0;
-  z-index: 999;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .navbar {
-  height: 80px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .nav-logo img {
-  width: 45px;
-  margin-right: 10px;
+  height: 40px;
+  width: 40px;
 }
 
 .nav-logo span {
-  font-size: 22px;
-  font-weight: 600;
+  font-weight: 700;
+  color: var(--coffee-brown);
+  font-size: 1.2rem;
+  transition: color 0.3s;
 }
 
+.nav-logo span:hover {
+  color: var(--pastel-green);
+}
+
+/* Links */
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 30px;
+  list-style: none;
+  gap: 2rem;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: var(--coffee-black);
   font-weight: 500;
-  transition: 0.3s;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: var(--coffee-brown);
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .nav-links a:hover {
-  color: #f39c12;
+  color: var(--coffee-brown);
 }
 
 .nav-links .active {
-  color: #f39c12;
-  font-weight: 600;
+  color: var(--coffee-brown);
+}
+
+/* Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .nav-icons a {
-  margin-left: 20px;
-  font-size: 18px;
-  color: #333;
-  transition: 0.3s;
+  color: var(--coffee-black);
+  font-size: 1.2rem;
+  transition: transform 0.3s, color 0.3s;
 }
 
 .nav-icons a:hover {
-  color: #f39c12;
+  color: var(--coffee-brown);
+  transform: scale(1.2);
 }
 
 /* ===== ABOUT SECTION ===== */
