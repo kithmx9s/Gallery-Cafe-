@@ -15,6 +15,8 @@ while ($row = $result->fetch_assoc()) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/logo.png">
@@ -29,11 +31,11 @@ while ($row = $result->fetch_assoc()) {
         </div>
 
         <ul class="nav-links">
-            <li><a href="index.php">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a class="active" href="menu.php">Menu</a></li>
             <li><a href="#">Reservations</a></li>
             <li><a href="#">Events</a></li>
-            <li><a href="about.php">About Us</a></li>
+            <li><a href="about.html">About Us</a></li>
         </ul>
 
         <div class="nav-icons">
@@ -59,6 +61,8 @@ while ($row = $result->fetch_assoc()) {
     </div>
 </section>
 
+
+
 <section class="menu-items">
     <?php foreach ($itemsByCountry as $country => $items): ?>
         <div class="items-grid country-block" id="<?php echo $country; ?>">
@@ -74,6 +78,54 @@ while ($row = $result->fetch_assoc()) {
         </div>
     <?php endforeach; ?>
 </section>
+
+<!-- ===== FOOTER SECTION ===== -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About -->
+    <div class="footer-section about">
+      <h3>Gallery Cafe</h3>
+      <p>
+        Serving the world’s flavors under one cozy roof. From coffee to pastries,
+        every bite tells a story. Come taste the journey.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.php">Menu</a></li>
+        <li><a href="#reservation">Reservation</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section contact">
+      <h3>Contact Us</h3>
+      <p>Email: info@gallerycafe.com</p>
+      <p>Phone: +94 77 123 4567</p>
+      <p>Address: 123 Café Street, Colombo, Sri Lanka</p>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-section social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 Gallery Café. All Rights Reserved.
+  </div>
 
 <script src="js/menu.js"></script>
 </body>
