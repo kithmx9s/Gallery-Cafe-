@@ -37,10 +37,10 @@ if($res2){
         <span>Gallery Café</span>
       </div>
       <ul class="nav-links">
-        <li><a href="index.php">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="menu.php">Menu</a></li>
         <li><a class="active" href="reservation.php">Reservations</a></li>
-        <li><a href="about.php">About</a></li>
+        <li><a href="about.html">About</a></li>
       </ul>
     </nav>
   </header>
