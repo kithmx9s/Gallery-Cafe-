@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Gallery Café</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/event.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <header>
+        <nav class="navbar">
+            <!-- Left: Logo -->
+            <div class="nav-logo">
+                <img src="assets/logo.png" alt="Gallery Café Logo" />
+                <span>Gallery Café</span>
+            </div>
+
+            <!-- Center: Nav Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.php">Menu</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="event.html" class="active">Events</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+
+            <!-- Right: Icons -->
+            <div class="nav-icons">
+                <a href="#login" class="login-btn"><i class="fa-solid fa-user"></i></a>
+                <a href="#search" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="events-container">
+        <div class="page-header">
+            <h1>Upcoming Events</h1>
+            <p>Join us for exciting culinary experiences and special occasions</p>
+        </div>
+
+        <div class="events-grid" id="eventsGrid">
+            <!-- Events will be populated by JavaScript -->
+        </div>
+    </main>
+
+    <!-- ===== EVENT MODAL ===== -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <button class="back-btn" id="backBtn">
+                <i class="fa-solid fa-arrow-left"></i> Back
+            </button>
+            <div class="modal-image">
+                <img id="modalImage" src="" alt="Event">
+            </div>
+            <div class="modal-details">
+                <h2 id="modalTitle"></h2>
+                <div class="modal-datetime">
+                    <div class="datetime-item">
+                        <i class="fa-solid fa-calendar"></i>
+                        <span id="modalDate"></span>
+                    </div>
+                    <div class="datetime-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <span id="modalTime"></span>
+                    </div>
+                </div>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Gallery Café</h3>
+                <p>Experience culinary excellence in an artistic atmosphere</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.php">Menu</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>123 Art Street, City</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@gallerycafe.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Gallery Café. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/event.js"></script>
+</body>
+</html>

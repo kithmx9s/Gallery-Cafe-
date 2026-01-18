@@ -118,8 +118,37 @@ unset($_SESSION['form_data']);
     <link rel="stylesheet" href="css/reservation_model.css">
 </head>
 <body>
+<!-- ===== NAVBAR ===== -->
+  <header>
+    <nav class="navbar">
+      <!-- Left: Logo -->
+      <div class="nav-logo">
+        <img src="assets/logo.png" alt="Gallery Café Logo" />
+        <span>Gallery Café</span>
+      </div>
 
-    <!-- navbar here -->
+      <!-- Center: Nav Links -->
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="menu.php">Menu</a></li>
+          <li><a href="reservation.php">Reservation</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+
+      <!-- Right: Icons -->
+      <div class="nav-icons">
+        <a href="#login" class="login-btn"><i class="fa-solid fa-user"></i></a>
+        <a href="#search" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
 
     <div class="container">
         <div class="header">
@@ -185,7 +214,55 @@ unset($_SESSION['form_data']);
         </form>
     </div>
 
-    <!-- footer here -->
+<!-- ===== FOOTER SECTION ===== -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About -->
+    <div class="footer-section about">
+      <h3>Gallery Cafe</h3>
+      <p>
+        Serving the world’s flavors under one cozy roof. From coffee to pastries,
+        every bite tells a story. Come taste the journey.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.php">Menu</a></li>
+        <li><a href="#reservation">Reservation</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section contact">
+      <h3>Contact Us</h3>
+      <p>Email: info@gallerycafe.com</p>
+      <p>Phone: +94 77 123 4567</p>
+      <p>Address: 123 Café Street, Colombo, Sri Lanka</p>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-section social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 Gallery Café. All Rights Reserved.
+  </div>
+</footer>
+
 
     <div id="successModal" class="modal">
         <div class="modal-content">
