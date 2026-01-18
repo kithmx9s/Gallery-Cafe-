@@ -1,14 +1,16 @@
 <?php
+// db_connect.php
+
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db = "cafe_db";
+$db   = "cafe_db";
 
 $conn = new mysqli($host, $user, $pass, $db);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} else {
-    echo "Database connected successfully!";
 }
+
+$conn->set_charset("utf8mb4");
 ?>
