@@ -132,7 +132,7 @@ unset($_SESSION['form_data']);
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="menu.php">Menu</a></li>
           <li><a href="reservation.php">Reservation</a></li>
-          <li><a href="#events">Events</a></li>
+          <li><a href="event.html">Events</a></li>
           <li><a href="about.html">About Us</a></li>
         </ul>
 

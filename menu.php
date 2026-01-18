@@ -31,11 +31,11 @@ while ($row = $result->fetch_assoc()) {
         </div>
 
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a class="active" href="menu.php">Menu</a></li>
-            <li><a href="#">Reservations</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="menu.php">Menu</a></li>
+          <li><a href="reservation.php">Reservation</a></li>
+          <li><a href="event.html">Events</a></li>
+          <li><a href="about.html">About Us</a></li>
         </ul>
 
         <div class="nav-icons">
